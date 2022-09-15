@@ -53,11 +53,12 @@ a{
 }
  /* heder  */
  .main-container{
-    border-bottom:  1px solid #ECECEC ;
+    
  }
  
  .page-header {
     background-color: var(--color-wite-transporet);
+    border-bottom: 1px solid #ECECEC;
  }
 
 /* логотип */
@@ -70,8 +71,7 @@ a{
 .logo-accent {
     margin-right: 93px;
     padding-top: 24px;
-    padding-left: 0;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     display: block;
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
@@ -160,17 +160,15 @@ a{
     background: var(--bacground-accent-color)  ;
     margin: auto;
     text-align: center;
-}
-.conteiner-hero {
     padding-top: 200px;
-    padding-left: 252px;
-    padding-right: 252px;
     padding-bottom: 200px;
-    }
+}
+
 
     .hero .hero-title {
-    margin-bottom: 30px;
-    width: 696px;
+    max-width: 696px;
+    margin: 0 auto 30px;
+
 
     color: var(--white-color);
     font-weight: 900;
@@ -194,7 +192,7 @@ a{
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 216px;
-    border: 1px solid transparent;
+    border: none;
     text-align: center;
     }
 
@@ -207,16 +205,15 @@ a{
  /* about section */
  .feature{
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
  }
  .feauter-item{
-    flex-basis: calc(100% / 4);
+    flex-basis: calc(100% / 4 -30px);
     margin-left: 30px;
 }
- .feauter-item:first-of-type{
-    margin-left: 0;
- }
     
- .container-about{
+ .section-about {
     padding-top: 94px;
     padding-bottom: 94px;
  }
@@ -258,14 +255,14 @@ a{
     flex-basis: calc(100% / 3);
     margin-right:  30px;
     }
-    .prodgect-item:last-of-type {
+ .prodgect-item:last-of-type {
         margin-right: 0 ;
     }
     
 .img-item {
     display: block;
     }
-.container-prodgect{
+.section-prodgect{
     padding-bottom: 94px;
 }
 
@@ -273,22 +270,21 @@ a{
 /* employee list */
 .employees {
     display: flex;
-}
-.item-employees {
-    display: block;
-}
-.item-employees {
-    flex-basis: calc(100% / 4);
-    margin-bottom: 30px;
-    margin-right: 30px;
-    margin-left: 0 ;
-    }
-
-.container-emploees {
+    flex-wrap: wrap;
+    margin-right: -30px;
     padding-top: 94px;
     padding-bottom: 94px;
     background-color: var(--background-second-color);
+}
+.employees-item {
+    display: block;
+}
+.employees-item {
+    flex-basis: calc(100% / 4 -30px);
+    margin-right: 30px;
+    text-align: center;
     }
+
 
 .employees .coworcer  {
     color: var(--title-text-color);
@@ -306,22 +302,30 @@ a{
 
 
 /* footer */
-.conteiner-foot {
+
+
+.footer {
+    background-color:var(--background-footer-color) ;
     padding-top: 60px;
     padding-left: 0px;
     padding-bottom: 60px;
 }
-
-.footer {
-    background-color:var(--background-footer-color) ;
-}
+ 
 .foot-accent {
+display: inline-block;
+
     color: var(--accent-text);
+    font-family: Raleway ;
+    font-size: 26px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
  .logo-foot {
         color: var(--white-color);
         }
+.foot-item {
+    margin-bottom: 9px;
+}
 .adress-foot .adress {
     color: var(--white-color);
     font-style: normal;
@@ -337,7 +341,7 @@ a{
 }
 
 /* portfolio navigations  */
-.conteiner-portfolio {
+.section-portfolio {
     padding-top: 94px;
     padding-bottom: 94px;
 
@@ -345,6 +349,10 @@ a{
 .filter {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
+}
+.item-button {
+    margin-left: 8px;
 }
 .buttons {
     cursor: pointer;
@@ -352,8 +360,7 @@ a{
     padding: 6px 22px;
     min-width: 103px;
     border: 1px solid transparent;
-    margin-bottom: 34px;
-    margin-left: 8px;
+    
     
 
    background-color:var(--background-second-color) ;
@@ -377,25 +384,24 @@ color: var(--white-color);}
 
 .project{
     padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: -15px;
+    
 }
  .project >.item-work {
-    flex-basis: calc(100%/3- 15px);
-    margin-left: 15px;
-    margin-top: 15px;
+    flex-basis: calc(100% / 3 - 30px);
+    margin: 15px;
  }
- .img-work{
-    margin-bottom: 20px;
+ 
+ 
+ .cards-name {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+          
  }
-.item-work{
-border-bottom: 1px solid #EEEEEE
-}
+
 .title-project {
     color: var(--title-text-color);
     font-weight: 700;
@@ -410,6 +416,6 @@ border-bottom: 1px solid #EEEEEE
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.8;
-    padding-bottom: 20px;
+    
 }
     
