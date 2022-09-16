@@ -190,14 +190,15 @@ a{
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 216px;
-    border: none;
+    
     text-align: center;
+    border: 1px solid transparent
     }
 
  .buttons-hero:hover,
  .buttons-hero:focus {
     background-color: var(--accent-battons-hover);
-    border: 1px solid transparent
+    
  }
 
  /* about section */
@@ -210,7 +211,7 @@ a{
     flex-basis: calc(100% / 4 - 30px);
     margin-left: 30px;}
    
-.feature:first-child {
+.feature :first-child {
     margin-left: 0px;
 }
    
@@ -272,12 +273,13 @@ a{
 .section-employees{
     padding-top: 94px;
     padding-bottom: 94px;
+    background-color: var(--background-second-color);
 }
 .employees {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
-    background-color: var(--background-second-color);
+    
 }
 .employees-item {
     display: block;
@@ -287,7 +289,10 @@ a{
     margin-right: 30px;
     text-align: center;
     }
-
+.item-employees {
+    display: block;
+    max-width: 100%;
+}
 
 .employees .coworcer  {
     color: var(--title-text-color);
@@ -347,6 +352,9 @@ display: inline-block;
 .adress-foot .adress:focus {
     color: var(--accent-text);
 }
+ .adress-foot :last-child {
+    margin-bottom: 0px;
+}
 
 /* portfolio navigations  */
 .section-portfolio {
@@ -405,7 +413,10 @@ color: var(--white-color);}
    
  }
  
- 
+ .img-work {
+    display: block;
+    max-width: 100%;
+ }
  .cards-name {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
