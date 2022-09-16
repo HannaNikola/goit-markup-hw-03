@@ -269,12 +269,14 @@ a{
 
    
 /* employee list */
+.section-employees{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .employees {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
-    padding-top: 94px;
-    padding-bottom: 94px;
     background-color: var(--background-second-color);
 }
 .employees-item {
@@ -417,7 +419,7 @@ color: var(--white-color);}
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em ;
-    padding-bottom: 4px;
+    margin-bottom: 4px;
     
 }
 .work {
